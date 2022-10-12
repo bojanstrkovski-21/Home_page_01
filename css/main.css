@@ -1,0 +1,303 @@
+.section-1 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 18px;
+}
+
+.search-engines,
+.e-mail,
+.info,
+.e-apps,
+.banki,
+.banki-2,
+.stedilnici,
+.fin-ins {
+    flex: 1;
+}
+
+.search-engines,
+.info,
+.banki,
+.stedilnici {
+    background-color: rgba(0, 106, 145, 0.06);
+    border-radius: 23px;
+}
+.e-mail,
+.e-apps,
+.banki-2,
+.fin-ins {
+    background-color: rgba(0, 106, 145, 0.06);
+    border-radius: 23px;
+    
+}
+
+.h2 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color:  rgb(145, 245, 145);
+    font-weight: 600;
+    font-style: italic;
+    
+}
+
+h2 {
+    margin: 0 6px 10px 6px;
+    padding-bottom: 7px;
+}
+
+.google,.brave,.duckduckgo,
+.bing,.yahoo-s,.g-mail,
+.outlook,.yahoo-m,
+.youtube,.time-date,
+.work-days-calculator,
+.wikipedia,.wikipedia-mk,
+.yrno,.vesti24,.timemk,
+.e-obvrski,.e-pdd,.e-danoci,
+.e-nabavki,.e-speo,.e-stat,
+.EVN-online,.hrmis,.stbbt,.stbsk,
+.sparkase,.kb,.nlb,.ttk,.pcb,
+.unibank,.silk,.ckb,.kapital,
+.fulm,.moznosti,.menuvacnici {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #07ffc1;
+}
+
+.e-obvrski a:visited,.e-pdd a:visited,
+.e-danoci a:visited,.e-nabavki a:visited,
+.e-speo a:visited,.e-stat a:visited,
+.EVN-online a:visited,.hrmis a:visited,
+.youtube a:visited,.time-date a:visited,
+.work-days-calculator a:visited,
+.wikipedia a:visited,.wikipedia-mk a:visited,
+.yrno a:visited,.vesti24 a:visited,
+.timemk a:visited,.g-mail a:visited,
+.outlook a:visited,.yahoo-m a:visited,
+.google a:visited,.brave a:visited,
+.duckduckgo a:visited,.bing a:visited,
+.yahoo-s a:visited,.stbbt a:visited,
+.stbsk a:visited,.sparkase a:visited,.kb a:visited,
+.nlb a:visited,.ttk a:visited,.pcb a:visited,
+.unibank a:visited,.silk a:visited,.ckb a:visited,
+.kapital a:visited,.fulm a:visited,
+.moznosti a:visited,.menuvacnici a:visited {
+color: #07ffc1;
+}
+.e-obvrski a:link,.e-pdd a:link,
+.e-danoci a:link,.e-nabavki a:link,
+.e-speo a:link,.e-stat a:link,
+.EVN-online a:link,.hrmis a:link,
+.youtube a:link,.time-date a:link,
+.work-days-calculator a:link,
+.wikipedia a:link,.wikipedia-mk a:link,
+.yrno a:link,.vesti24 a:link,.timemk a:link,
+.g-mail a:link,.outlook a:link,.yahoo-m a:link,
+.google a:link,.brave a:link,.duckduckgo a:link,
+.bing a:link,.yahoo-s a:link,.stbbt a:link,
+.stbsk a:link,.sparkase a:link,.kb a:link,
+.nlb a:link,.ttk a:link,.pcb a:link,
+.unibank a:link,.silk a:link,.ckb a:link,
+.kapital a:link,.fulm a:link,.moznosti a:link,
+.menuvacnici a:link {
+    text-decoration: none;
+    color: #07ffc1;
+}
+.e-obvrski a:focus,.e-pdd a:focus,
+.e-danoci a:focus,.e-nabavki a:focus,
+.e-speo a:focus,.e-stat a:focus,
+.EVN-online a:focus,.hrmis a:focus,
+.youtube a:focus,.time-date a:focus,
+.work-days-calculator a:focus,
+.wikipedia a:focus,.wikipedia-mk a:focus,
+.yrno a:focus,.vesti24 a:focus,.timemk a:focus
+.g-mail a:focus,.outlook a:focus,.yahoo-m a:focus,
+.google a:focus,.brave a:focus,.duckduckgo a:focus,
+.bing a:focus,.yahoo-s a:focus,.stbbt a:focus,
+.stbsk a:focus,.sparkase a:focus,.kb a:focus,
+.nlb a:focus,.ttk a:focus,.pcb a:focus,
+.unibank a:focus,.silk a:focus,.ckb a:focus,
+.kapital a:focus,.fulm a:focus,.moznosti a:focus,
+.menuvacnici a:focus  {
+    color: #07ffc1;
+}
+
+.e-obvrski a:hover,.e-pdd a:hover,
+.e-danoci a:hover,.e-nabavki a:hover,
+.e-speo a:hover,.e-stat a:hover,
+.EVN-online a:hover,.hrmis a:hover,
+.youtube a:hover,.time-date a:hover,
+.work-days-calculator a:hover,
+.wikipedia a:hover,.wikipedia-mk a:hover,
+.yrno a:hover,.vesti24 a:hover,.timemk a:hover,
+.g-mail a:hover,.outlook a:hover,.yahoo-m a:hover,
+.google a:hover,.brave a:hover,.duckduckgo a:hover,
+.bing a:hover,.yahoo-s a:hover,.stbbt a:hover,
+.stbsk a:hover,.sparkase a:hover,.kb a:hover,
+.nlb a:hover,.ttk a:hover,.pcb a:hover,.ckb a:hover,
+.unibank a:hover,.silk a:hover,.kapital a:hover,
+.fulm a:hover,.moznosti a:hover,.menuvacnici a:hover {
+    background-color: #881544;
+    color: #07ffc1;
+}
+
+.info,
+.e-mail,
+.search-engines,
+.banki,
+.banki-2,
+.stedilnici {
+    margin-right: 10px;
+}
+
+.section-2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.institucii-1,
+.institucii-2,
+.vlada-1,.vlada-2 {
+    background-color: rgba(0, 106, 145, 0.06);
+    border-radius: 23px;
+    flex: 1;
+}
+
+.institucii-1,
+.institucii-2,
+.vlada-1 {
+    margin-right: 10px;
+}
+
+.h3 {
+    font-size: 23px;
+}
+
+.slvesnik,.ujp,.avrsm,.fzo,
+.piom,.katastar,.crm,.statmk,
+.bjn,.opstinabt,.ener,.bro,
+.csoo,.posta,.nbrm,.nbrm-2,
+.isos,.dic,.matura,
+.brz-transfer,.depoziti,
+.berza,.kibs {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #07ffc1;
+}
+
+
+.slvesnik a:visited,.ujp a:visited,
+.avrsm a:visited,.fzo a:visited,
+.piom a:visited,.katastar a:visited,
+.crm a:visited,.statmk a:visited,
+.bjn a:visited,.opstinabt a:visited,
+.ener a:visited,.bro a:visited,
+.csoo a:visited,.posta a:visited,
+.nbrm a:visited,.nbrm-2 a:visited,
+.isos a:visited,.dic a:visited,
+.matura a:visited,.vlada a:visited,
+.mon a:visited,.finansii a:visited,
+.mioa a:visited,.mtsp a:visited,
+.ekonomija a:visited,.lokalna a:visited,
+.transport a:visited,.mvr a:visited,
+.mnr a:visited,.odbrana a:visited,
+.pravda a:visited,.zdravstvo a:visited,
+.kultura a:visited,.zspp a:visited,
+.zsv a:visited,.ps-zaednici a:visited,
+.brz-transfer a:visited,.depoziti a:visited,
+.berza a:visited,.kibs a:visited {
+    color: #07ffc1;
+}
+
+
+.slvesnik a:focus,.ujp a:focus,
+.avrsm a:focus,.fzo a:focus,
+.piom a:focus,.katastar a:focus,
+.crm a:focus,.statmk a:focus,
+.bjn a:focus,.opstinabt a:focus,
+.ener a:focus,.bro a:focus,
+.csoo a:focus,.posta a:focus,
+.nbrm a:focus,.nbrm-2 a:focus,
+.isos a:focus,.dic a:focus,
+.matura a:focus,.vlada a:focus,
+.mon a:focus,.finansii a:focus,
+.mioa a:focus,.mtsp a:focus,
+.ekonomija a:focus,.lokalna a:focus,
+.transport a:focus,.mvr a:focus,
+.mnr a:focus,.odbrana a:focus,
+.pravda a:focus,.zdravstvo a:focus
+.kultura a:focus,.zspp a:focus,
+.zsv a:focus,.ps-zaednici a:focus,
+.brz-transfer a:focus,.depoziti a:focus,
+.berza a:focus,.kibs a:focus {
+    color: #07ffc1;
+}
+
+.slvesnik a:link,.ujp a:link,
+.avrsm a:link,.fzo a:link,
+.piom a:link,.katastar a:link,
+.crm a:link,.statmk a:link,
+.bjn a:link,.opstinabt a:link,
+.ener a:link,.bro a:link,
+.csoo a:link,.posta a:link,
+.nbrm a:link,.nbrm-2 a:link,
+.isos a:link,.dic a:link,
+.matura a:link,.vlada a:link,
+.mon a:link,.finansii a:link,
+.mioa a:link,.mtsp a:link,
+.ekonomija a:link,.lokalna a:link,
+.transport a:link,.mvr a:link,
+.mnr a:link,.odbrana a:link,
+.pravda a:link,.zdravstvo a:link,
+.kultura a:link,.zspp a:link,
+.zsv a:link,.ps-zaednici a:link,
+.brz-transfer a:link,.depoziti a:link,
+.berza a:link,.kibs a:link  {
+    color: #07ffc1;
+    text-decoration: none;
+}
+
+.slvesnik a:hover,.ujp a:hover,
+.avrsm a:hover,.fzo a:hover,
+.piom a:hover,.katastar a:hover,
+.crm a:hover,.statmk a:hover,
+.bjn a:hover,.opstinabt a:hover,
+.ener a:hover,.bro a:hover,
+.csoo a:hover,.posta a:hover,
+.nbrm a:hover,.nbrm-2 a:hover,
+.isos a:hover,.dic a:hover,
+.matura a:hover,.vlada a:hover,
+.mon a:hover,.finansii a:hover,
+.mioa a:hover,.mtsp a:hover,
+.ekonomija a:hover,.lokalna a:hover,
+.transport a:hover,.mvr a:hover,
+.mnr a:hover,.odbrana a:hover,
+.pravda a:hover,.zdravstvo a:hover,
+.kultura a:hover,.zspp a:hover,
+.zsv a:hover,.ps-zaednici a:hover,
+.brz-transfer a:hover,.depoziti a:hover,
+.berza a:hover,.kibs a:hover {
+    background-color: #881544;
+    color: #07ffc1;
+}
+
+.vlada,.mon,.finansii,.mioa,
+.mtsp,.ekonomija,.lokalna,
+.transport,.mvr,.mnr,.odbrana,
+.pravda,.zdravstvo,.kultura,
+.zspp,.zsv,.ps-zaednici {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #07ffc1;
+}

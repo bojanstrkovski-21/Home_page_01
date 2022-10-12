@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9, shrink-to-fit=yes">  
+    ">
+    <title>WebHome2022</title>
+    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top">
+        <div class="clock">
+                
+            <div class="digital-clock">
+                <i class="uil uil-ellipsis-v dot-menu-btn" id="active-menu"></i>
+                <ul class="dot-menu" id="active-menu">
+                  <li class="menu-item" id="active-menu">
+                    <span class="clock-format-text" id="active-menu">24-hour format</span>
+                    <div class="format-switch-btn" id="active-menu" data-format="12"></div>
+                  </li>
+                </ul>
+              <div class="time">
+                  <span class="hours">00</span>
+                  <span class="dots">:</span>
+                  <span class="minutes">00</span>
+                <div class="right-side">
+              <span class="period">AM/PM</span>
+              <span class="seconds">00</span>
+                </div>
+              </div>
+              <div class="calendar">
+                <span class="day-name">Day</span>,
+                <span class="day-number">00</span>
+                <span class="month-name">Month</span>
+                <span class="year">0000</span>
+              </div>
+              </div>
+              
+              <script>
+              //Javascript for switch clock format
+              const formatSwitchBtn = document.querySelector(".format-switch-btn");
+              
+              formatSwitchBtn.addEventListener("click", () => {
+              formatSwitchBtn.classList.toggle("active");
+              
+              var formatValue = formatSwitchBtn.getAttribute("data-format");
+              
+              if(formatValue === "12") {
+                formatSwitchBtn.setAttribute("data-format", "24");
+              }
+              else {
+                formatSwitchBtn.setAttribute("data-format", "12");
+              }
+              });
+              
+              //Get current time in javascript
+              function clock() {
+                var today = new Date();
+              
+                var hours = today.getHours();
+                var minutes = today.getMinutes();
+                var seconds = today.getSeconds();
+                let period = "AM";
+              
+                //Set the time period(AM/PM)
+                if(hours >= 12) {
+                  period = "PM";
+                }
+              
+                //Set the 12-hour clock format
+                var formatValue = formatSwitchBtn.getAttribute("data-format");
+              
+                if(formatValue === "12") {
+                  hours= hours > 12 ? hours % 12 : hours;
+                }
+                
+              
+                //Add the 0 for the values lower than 10
+                if(hours < 10) {
+                  hours = "0" + hours;
+                }
+              
+                if(minutes < 10) {
+                  minutes = "0" + minutes;
+                }
+              
+                if(seconds < 10) {
+                  seconds = "0" + seconds;
+                }
+              
+              
+                document.querySelector(".hours").innerHTML = hours;
+                document.querySelector(".minutes").innerHTML = minutes;
+                document.querySelector(".seconds").innerHTML = seconds;
+                document.querySelector(".period").innerHTML = period;
+              }
+              var updateClock = setInterval(clock, 1000);
+              
+              //Get the date in javascript
+              var today = new Date();
+              const dayNumber = today.getDate();
+              const year = today.getFullYear();
+              const dayName = today.toLocaleString("default", {weekday: "long"});
+              const monthName = today.toLocaleString("default", {month: "long"});
+              
+              document.querySelector(".month-name").innerHTML = monthName;
+              document.querySelector(".day-name").innerHTML = dayName;
+              document.querySelector(".day-number").innerHTML = dayNumber;
+              document.querySelector(".year").innerHTML = year;
+              
+              // Javascript fo dot-menu toggle
+              const dotmenuBtn = document.querySelector(".dot-menu-btn");
+              const dotMenu = document.querySelector(".dot-menu");
+              
+              dotmenuBtn.addEventListener("click", () => {
+              dotMenu.classList.toggle("active");
+              });
+              
+              document.addEventListener("click", (e) => {
+                if(e.target.id !== "active-menu"){
+                  dotMenu.classList.remove("active");
+                }
+              });
+              </script>
+        </div>
+        <div class="naslov">
+            <div class="logo-l">
+                <img src="images/Logo-L.png" alt="Logo-L" height="120" width="120">
+            </div>
+            <div class="name">
+                W&nbsp; E&nbsp; B&nbsp;&nbsp;  &nbsp;H&nbsp; O&nbsp; M&nbsp; E&nbsp;&nbsp;  &nbsp;2&nbsp; 0&nbsp; 2&nbsp; 2
+            </div>
+            <div class="logo-r">
+                <img src="images/Logo-R.png" alt="Logo-R" height="120" width="120">
+            </div>
+        <div class="weather">
+          <div id="ww_ca151b0172ef6" v='1.20' loc='id' a='{"t":"horizontal","lang":"en","ids":["wl11995"],"cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_sot":"celsius","sl_ics":"one_a","font":"Arial","el_whr":3}'>Weather for the Following Location: <a href="https://2ua.org/mkd/bitola/map/" id="ww_ca151b0172ef6_u" target="_blank">Bitola map, Macedonia</a></div><script async src="https://srv1.weatherwidget.org/js/?id=ww_ca151b0172ef6"></script>          </div>
+    </div>
+    <div class="links">
+        <main class="main"> <!--Main-content-start-->
+            <div class="section-1"><!--section-1-start-->
+                <div class="search-engines"><!--search-engines-start-->
+                    <div class="h2">
+                        <h2>&#9734; Search-Engines  &#9734;</h2>
+                    </div>
+                    <div class="google">
+                        <a href="https://www.google.com/" target="_blank">Google</a>
+                      </div>
+                      <div class="brave">
+                        <a href="https://search.brave.com/" target="_blank">Brave Search</a>
+                      </div>
+                      <div class="duckduckgo">
+                        <a href="https://duckduckgo.com/" target="_blank">DuckDuckGo</a>
+                      </div>
+                      <div class="bing">
+                        <a href="https://www.bing.com/">Bing</a>
+                      </div>
+                      <div class="yahoo-s">
+                        <a href="https://search.yahoo.com/" target="_blank">Yahoo Search</a>
+                      </div>
+                </div><!--search-engines-end-->
+            
+                <div class="e-mail"><!--e-mail-start-->
+                <div class="h2">
+                    <h2>&#9734; Mail &#9734;</h2>
+                </div>
+                    <div class="g-mail">
+                        <a href="https://mail.google.com/" target="_blank">G-mail
+                    </div>
+                    <div class="outlook">
+                        <a href="https://outlook.live.com/" target="_blank">Hotmail-Live-Outlook</a>
+                    </div>
+                    <div class="yahoo-m">
+                        <a href="https://login.yahoo.com/" target="_blank">Yahoo</a>
+                    </div>
+                    <div class="yahoo-m">
+                        <a href="https://www.dropbox.com/login" target="_blank">Dropbox</a>
+                    </div>
+
+                </div><!--e-mail-end-->
+            
+                <div class="info"><!--info-start-->
+                    <div class="h2">
+                        <h2>&#9734; Info &#9734;</h2>
+                    </div>
+                        <div class="youtube">
+                            <a href="https://www.youtube.com/" target="_blank">Youtube</a>
+                        </div>
+                        <div class="time-date">
+                            <a href="https://www.timeanddate.com/" target="_blank">Time and Date</a>
+                        </div>
+                        <div class="work-days-calculator">
+                            <a href="https://www.timeanddate.com/date/workdays.html" target="_blank">Work Days Calculator</a>
+                        </div>
+                        <div class="wikipedia">
+                            <a href="https://en.wikipedia.org/" target="_blank">Wikipedia</a>
+                        </div>
+                        <div class="wikipedia-mk">
+                            <a href="https://mk.wikipedia.org/" target="_blank">Wikipedia MK</a>
+                        </div>
+                        <div class="yrno">
+                            <a href="https://www.yr.no/en/forecast/daily-table/2-792578/North%20Macedonia/Bitola/Bitola" target="_blank">Yr.no</a>
+                        </div>
+                        <div class="vesti24">
+                            <a href="https://24.mk/" target="_blank">24 Vesti</a>
+                        </div>
+                        <div class="timemk">
+                            <a href="https://time.mk/" target="_blank">Time MK</a>
+                        </div>
+                </div><!--info-end-->
+                <div class="e-apps"><!--e-apps-start-->
+                    <div class="h2">
+                        <h2>&#9734; E-Services &#9734;</h2>
+                    </div>
+                        <div class="e-obvrski">
+                            <a href="https://e-trezor.finance.gov.mk/" target="_blank">E-Obvrski</a>
+                        </div>
+                        <div class="e-pdd">
+                            <a href="https://e-pdd.ujp.gov.mk/" target="_blank">E-Pdd</a>
+                        </div>
+                        <div class="e-danoci">
+                            <a href="https://etax-fl.ujp.gov.mk/" target="_blank">E-Danoci</a>
+                        </div>
+                        <div class="e-nabavki">
+                            <a href="https://www.e-nabavki.gov.mk/" target="_blank">E-Nabavki</a>
+                        </div>
+                        <div class="e-speo">
+                            <a href="https://peo.finance.gov.mk/" target="_blank">E-Speo</a>
+                        </div>
+                        <div class="e-stat">
+                            <a href="https://estat.stat.gov.mk/" target="_blank">E-Stat</a>
+                        </div>
+                        <div class="EVN-online">
+                            <a href="https://www.evnonline.mk" target="_blank">EVN - online</a>
+                        </div>
+                        <div class="hrmis">
+                            <a href="https://hrm.gov.mk" target="_blank">Х Р М И С</a>
+                        </div>
+                </div><!--e-apps-end-->
+            </div><!--section-1-end-->
+            
+            <div class="section-2"><!--section-2-start-->
+            
+                <div class="institucii-1"><!--institucii-1-start-->
+                    <div class="h2">
+                        <h2 class="h3">&#9734; Државни институции &#9734;</h2>
+                    </div>
+                    <div class="slvesnik">
+                        <a href="https://slvesnik.com.mk/" target="_blank">Службен весник Р.С.М.</a>
+                      </div>
+                      <div class="ujp">
+                        <a href="http://ujp.gov.mk/" target="_blank">Управа за јавни приходи</a>
+                      </div>
+                      <div class="avrsm">
+                        <a href="https://av.gov.mk/" target="_blank">Агенција за вработување на Р.С.М.</a>
+                      </div>
+                      <div class="fzo">
+                        <a href="https://fzo.org.mk/" target="_blank">Фонд за здравствено осигурување</a>
+                      </div>
+                      <div class="piom">
+                        <a href="http://www.piom.com.mk/" target="_blank">Фонд за пензиско и инвалидско осигурување</a>
+                      </div>
+                      <div class="katastar">
+                        <a href="https://www.katastar.gov.mk" target="_blank">Агенција за катастар на недвижности</a>
+                      </div>
+                      <div class="crm">
+                        <a href="https://crm.com.mk/" target="_blank">Централен регистар Р.С.М.</a>
+                      </div>
+                      <div class="statmk">
+                        <a href="https://www.stat.gov.mk/Default.aspx" target="_blank">Државен завод за статистика</a>
+                      </div>
+                      <div class="bjn">
+                        <a href="https://www.bjn.gov.mk/" target="_blank">Биро за јавни набавки</a>
+                      </div>
+                      <div class="opstinabt">
+                        <a href="https://www.bitola.gov.mk/" target="_blank">Општина Битола</a>
+                      </div>
+                </div><!--institucii-1-end-->
+                <div class="institucii-2"><!--institucii-2-start-->
+                    <div class="h2">
+                        <h2 class="h3">&#9734; Државни институции &#9734;</h2>
+                    </div>
+                    <div class="ener">
+                        <a href="https://ener.gov.mk/" target="_blank">Енер</a>
+                      </div>
+                      <div class="matura"><a href="http://www.matura.gov.mk/" target="_blank">Државна Матура</a>
+                      </div>
+                      <div class="dic">
+                        <a href="https://dic.edu.mk/" target="_blank">Државен испитен центар</a>
+                      </div>
+                      <div class="bro">
+                        <a href="https://www.bro.gov.mk/" target="_blank">Биро за развој на образованието</a>
+                      </div>
+                      <div class="csoo">
+                        <a href="https://csoo.edu.mk/" target="_blank">Центар за стручно образование и обука</a>
+                      </div>
+                      <div class="posta">
+                        <a href="https://www.posta.com.mk/" target="_blank">Македонска Пошта</a>
+                      </div>
+                      <div class="nbrm">
+                        <a href="https://www.nbrm.mk/" target="_blank">Народна Банка на Р.С.М.</a>
+                      </div>
+                      <div class="nbrm-2">
+                        <a href="banki.html" target="_blank">Банки, Штедилници</a>
+                      </div>
+                      <div class="isos">
+                        <a href="https://isos.com.mk/" target="_blank">Институт на сметководители и овластени сметководители</a>
+                      </div>
+                </div><!--Institucii-2-end-->
+                <div class="vlada-1"><!--vlada-1-start-->
+                    <div class="h2">
+                        <h2 class="h3">&#9734; Влада и министерства &#9734;</h2>
+                    </div>
+                    <div class="vlada">
+                        <a href="https://www.vlada.mk/" target="_blank">Влада на Р.С.М.</a>
+                    </div>
+                    <div class="mon">
+                        <a href="https://www.mon.gov.mk/" target="_blank">Министерство за образование и наука</a>
+                      </div>
+                      <div class="finansii">
+                        <a href="https://www.finance.gov.mk/" target="_blank">Министерство за финансии</a>
+                      </div>
+                      <div class="mioa">
+                        <a href="https://www.mioa.gov.mk/" target="_blank">Министерство за информатичко општество и администрација</a>
+                      </div>
+                      <div class="mtsp">
+                        <a href="https://www.mtsp.gov.mk/" target="_blank">Министерство за труд и социјална политика</a>
+                      </div>
+                      <div class="ekonomija">
+                        <a href="https://www.economy.gov.mk/" target="_blank">Министерство за економија</a>
+                      </div>
+                      <div class="lokalna">
+                        <a href="http://www.mls.gov.mk/" target="_blank">Министерство за локална самоуправа</a>
+                      </div>
+                      <div class="transport">
+                        <a href="http://www.mtc.gov.mk/" target="_blank">Министерство за транпспорт и врски</a>
+                      </div>
+                      <div class="mvr">
+                        <a href="https://www.vlada.mk/MVR" target="_blank">Министерство за внатрешни работи</a>
+                      </div>
+                </div><!--vlada-1-end-->
+                <div class="vlada-2"><!--vlada-2-start-->
+                    <div class="h2">
+                        <h2 class="h3">&#9734; Влада и министерства &#9734;</h2>
+                    </div> 
+                    <div class="mnr">
+                        <a href="http://www.mfa.gov.mk/" target="_blank">Министерство за надворешни работи</a>
+                    </div>
+                    <div class="odbrana">
+                        <a href="http://www.mod.gov.mk/" target="_blank">Министерство за одбрана</a>
+                      </div>
+                      <div class="pravda">
+                        <a href="http://www.pravda.gov.mk/" target="_blank">Министерство за правда</a>
+                      </div>
+                      <div class="zdravstvo">
+                        <a href="http://www.zdravstvo.gov.mk/" target="_blank">Министерство за здравство</a>
+                      </div>
+                      <div class="kultura">
+                        <a href="http://www.kultura.gov.mk/" target="_blank">Министерство за култура</a>
+                      </div>
+                      <div class="zspp">
+                        <a href="http://www.moepp.gov.mk/" target="_blank">Министарство за животна средина и просторно планирање</a>
+                      </div>
+                      <div class="zsv">
+                        <a href="http://www.mzsv.gov.mk/" target="_blank">Министерство за заемјоделство, шумарство и водостопанство</a>
+                      </div>
+                      <div class="ps-zaednici">
+                        <a href="http://www.mpsoz.gov.mk/" target="_blank">Министерство за политички систем и односи со заедниците</a>
+                      </div>
+                </div><!--vlada-2-end-->
+            </div><!--section-2-end-->
+            <div class="footer"><!--fiiter-start-->
+                      <div class="copyright">
+                        &#174; БОЈАН ШТРКОВСКИ 2&nbsp;0&nbsp;2&nbsp;2 &#174;
+                      </div>
+                    
+                    </div><!--footer-end-->
+            </main> <!--Main-content-end-->
+    </div>
+    
+    
+</body>
+</html>
